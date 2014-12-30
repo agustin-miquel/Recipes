@@ -1,0 +1,21 @@
+/*
+ * Styles for the ingredients list datatable.
+ * (edit recipe)
+ */
+
+/*
+ * Mobile phone.
+ */
+@media all and (max-width: 680px) {
+    
+}
+
+/*
+ * Tablets and PC's
+ */
+@media all and (min-width: 681px) {
+    
+    #list_current_ingredients {
+        height: 200px;
+    }
+}
