@@ -67,7 +67,7 @@
 
                             <!-- Current ingredients list -->
                             <div id="current_ingredients_panel" class="col-md-7">
-                                <table id="list_current_ingredients" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <table id="list_current_ingredients" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <th>Id</th>

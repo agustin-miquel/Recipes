@@ -24,14 +24,17 @@
 
                 <div class="list-group">
                     <c:forEach var="recipe" items="${ingredient.recipes}">
-                        <a href="detail?selected_recipe=${recipe.name}" class="list-group-item">
+                        <a href="detail?selected_recipe=${recipe.id}&origin=ingredient_detail?ingredient=${ingredient.name}" 
+                           class="list-group-item">
+                            
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             <span class="text-primary">${recipe}</span>
                         </a>
                     </c:forEach>
                 </div>
 
-                <input id="button_back" class="btn btn-default" type="button" value="Back" onclick="javascript:history.back()"/>
+                <input id="button_back" class="btn btn-default" type="button" value="Back" 
+                       onclick="javascript:history.back()"/>
             </div>
         </div><!-- /container -->
                     

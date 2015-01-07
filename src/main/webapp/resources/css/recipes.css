@@ -51,6 +51,9 @@
 }
 
 /* RECIPE EDITOR */
+#edit_buttons {
+    margin-bottom: 10px;
+}
 #new_ingredients_panel {
     border: 1px solid lightblue; 
     height: 520px;
@@ -66,6 +69,9 @@
 #list_current_ingredients {
     list-style: none;
     // see below...
+}
+#buttons_ingredients {
+    margin-top: 10px;
 }
 
 /* OTHER */

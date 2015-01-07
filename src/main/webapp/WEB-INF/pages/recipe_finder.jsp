@@ -49,6 +49,7 @@
             <form id="form_found_recipes" method="GET" action="detail">
 
                 <input type="hidden" id="selected_recipe" name="selected_recipe">
+                <input type="hidden" name="origin" value="recipe_finder">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -73,9 +74,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">
-                        <button type="submit" class="btn btn-info">Go to recipe</button>
-                        <input id="finder_back" class="btn btn-default" type="button" value="Back" onclick="location.href='home'"/>
+                    <div class="col-md-6">
+                        <input id="finder_back" class="btn btn-default" type="button" value="Back" 
+                               onclick="location.href='home'"/>
+                        
+                        <button id="goto_button" type="submit" class="btn btn-info" style="display:none;" >
+                            Go to selected recipe
+                        </button>
                     </div>
                 </div>
             </form>

@@ -17,7 +17,7 @@
                     </a>
                     
                     <c:forEach var="recipe" items="${recipes}">
-                        <a href="detail?selected_recipe=${recipe.name}" class="list-group-item">
+                        <a href="detail?selected_recipe=${recipe.id}&origin=home" class="list-group-item">
                             <em>&nbsp; &nbsp; &nbsp; Recent recipes:</em>
                             <span class="text-primary">${recipe}</span>
                         </a>
@@ -36,16 +36,6 @@
                     <a href="ingredient_finder" class="list-group-item">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                         <span class="text-success"><b>Ingredient Finder</b></span>
-                    </a>
-
-                    <a href="login" class="list-group-item">
-                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                        <span class="text-warning"><b>User Login</b></span>
-                    </a>
-
-                    <a href="new_user" class="list-group-item">
-                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-                        <span class="text-danger"><b>New User</b></span>
                     </a>
                 </div>
             </div>

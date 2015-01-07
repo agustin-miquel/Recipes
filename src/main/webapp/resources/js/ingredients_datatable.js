@@ -49,8 +49,6 @@ function mobile() {
 function other() {
 
     var table = $('#list_current_ingredients').DataTable( {
-        "scrollY":        "200px",
-        "scrollCollapse": true,
         "paging":         false,
         "bFilter":        false
     } );

@@ -26,11 +26,13 @@
                     <button class="btn btn-default btn-block"  type="button" onclick="javascript:history.back()" >Cancel</button>
                 </form>
 
-                <c:if test="${message}">
-                    <div class="alert alert-danger">
-                        ${message}
-                    </div>
-                </c:if>
+                <div class="row" id="messages">
+                    <c:if test="${error}">
+                        <div class="alert alert-danger">
+                            ${error}
+                        </div>
+                    </c:if>
+                </div>
             </div>
                     
         </div><!-- /container -->

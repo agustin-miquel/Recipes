@@ -11,7 +11,7 @@
         <url>http://Recipes.com</url>
     </organization>
 
-    <groupId>com.pruebas</groupId>
+    <groupId>com.dev</groupId>
     <artifactId>Recipes</artifactId>
     <version>1.0</version>
 

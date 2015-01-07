@@ -21,7 +21,8 @@
                     Timestamp: ${timestamp} <br/>
                 </div>
 
-                <input id="button_back" class="btn btn-default" type="button" value="Back" onclick="location.href='home'"/>
+                <input id="button_back" class="btn btn-default" type="button" value="Back" 
+                       onclick="javascript:history.back()"/>
             </div>
         </div><!-- /container -->
                     

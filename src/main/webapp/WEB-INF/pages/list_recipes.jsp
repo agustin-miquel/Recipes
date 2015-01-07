@@ -14,7 +14,7 @@
                 <div class="col-sm-6 col-md-4">
                     <h4>Your recipes:</h4>
                     <c:forEach var="recipe" items="${recipes}">
-                        <a href="detail?selected_recipe=${recipe.name}" class="list-group-item">
+                        <a href="detail?selected_recipe=${recipe.id}&origin=list_recipes" class="list-group-item">
                             <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
                             <span class="text-primary">${recipe}</span>
                         </a>

@@ -15,9 +15,13 @@
                     <h4 class="form-signin-heading" style="margin-top:15px;">Please sign in:</h4>
 
                     <label for="username" class="sr-only">User name</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="User Id" autofocus>
+                    <input type="text" id="username" name="username" class="form-control" 
+                           value="test" placeholder="User Id" autofocus>
+                    
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                    <input type="password" id="password" name="password" class="form-control" 
+                           value="test" placeholder="Password">
+                    
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="remember-me" /> Remember Me:

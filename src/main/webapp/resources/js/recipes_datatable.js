@@ -48,8 +48,6 @@ function mobile() {
 function other() {
 
     var table = $('#recipelist').DataTable( {
-        "scrollY":        "200px",
-        "scrollCollapse": true,
         "paging":         false
     } );
  

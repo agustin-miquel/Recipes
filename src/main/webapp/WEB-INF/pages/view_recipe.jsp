@@ -34,7 +34,10 @@
                     </c:forEach>
                 </div>
 
-                <input id="button_back" class="btn btn-default" type="button" value="Back" onclick="location.href='maintenance_menu'"/>
+                <input id="button_back" class="btn btn-default" type="button" value="Back" onclick="location.href='${origin}'"/>
+                <c:if test="${origin != 'home'}">
+                    <input id="button_home" class="btn btn-default" type="button" value="Home" onclick="location.href='home'"/>
+                </c:if>
             </div>
         </div><!-- /container -->
                     

@@ -69,6 +69,9 @@ function viewRecipeDetail(idRecipe) {
     // Select recipe (set id hidden form field) and let it ready for the GET:
     $('#selected_recipe').val(idRecipe);
 
+    // Go to recipe button is activated:
+    $('#goto_button').css('display','inline');
+
     // Retrive details and populate the corresponding fields:
     $.getJSON("get_recipe",
             {
