@@ -25,16 +25,16 @@
                     <button class="btn btn-primary btn-block" style="margin-top: 15px;" type="submit">Create</button>
                     <button class="btn btn-default btn-block"  type="button" onclick="javascript:history.back()" >Cancel</button>
                 </form>
-
-                <div class="row" id="messages">
-                    <c:if test="${error}">
-                        <div class="alert alert-danger">
-                            ${error}
-                        </div>
-                    </c:if>
-                </div>
             </div>
-                    
+
+            <div class="row" id="messages">
+                <c:if test="${error != null && error != ''}">
+                    <div class="alert alert-danger">
+                        ${error}
+                    </div>
+                </c:if>
+            </div>
+                   
         </div><!-- /container -->
                     
         <jsp:include page="fragments/footer.jsp" />

@@ -90,7 +90,7 @@ public class Application extends SpringBootServletInitializer {
         return new Properties() {
             // (this is just a java initialization block)
             {
-                setProperty("hibernate.hbm2ddl.auto", "update");  // validate | update | create
+                setProperty("hibernate.hbm2ddl.auto", "validate");  // validate | update | create
                 setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
             }
         };

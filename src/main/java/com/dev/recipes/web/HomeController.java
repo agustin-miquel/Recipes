@@ -3,13 +3,16 @@ package com.dev.recipes.web;
 import com.dev.recipes.domain.entities.Recipe;
 import com.dev.recipes.service.RecipeServices;
 import com.dev.recipes.service.UserServices;
+import com.dev.util.ValidationException;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * Home page Controller.
@@ -94,30 +97,43 @@ public class HomeController {
     
     /**
      * Create new user
-     * @param model
+     * @param model     
      * @param request
      * @return 
+     * 
+     * NOTE: RedirectAttributes is a specialization of model: 
+     *       Attributes (like error messages) are not lost when doing a redirect.
      */
     @RequestMapping(value="/create_user", method=POST)
-    public String createUser(Model model, HttpServletRequest request) {
+    public String createUser(RedirectAttributes model, HttpServletRequest request) {
         try {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             String password2 = request.getParameter("password2");
 
+            // Check password:
             if (!password.equals(password2)) {
-                throw new Exception("Password does not match");
+                throw new ValidationException("Password does not match");
+            }
+            
+            // Check if exists:
+            if (userServices.exists(username)) {
+                throw new ValidationException("User name already exists in the database");
             }
             
             userServices.createUser(username, password);
 
-            // Confirmation: redirect after POST:
+            // Redirect after POST:
             return "redirect:new_user_created";
         } 
+        catch(ValidationException e) {
+            model.addFlashAttribute("error", e.getMessage());
+            // Redirect after POST:
+            return "redirect:new_user";
+        }
         catch(Exception e) {
-            model.addAttribute("message", e.getMessage());
-
-            // Errors: redirect after POST:
+            model.addFlashAttribute("error", "Database error: " + e.getMessage());
+            // Redirect after POST:
             return "redirect:new_user";
         }
     }
