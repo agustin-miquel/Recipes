@@ -1,0 +1,38 @@
+/*
+ * Styles for the recipes list datatable.
+ * (maintenance menu)
+ */
+
+/*
+ * Mobile phone.
+ */
+@media all and (max-width: 680px) {
+    
+    /* Maintenance Menu Buttons */
+    #menu_buttons {
+        margin-top: 10px;
+    }
+    #menu_buttons button {
+        margin-right: 0;
+    }
+    #menu_buttons #back {
+        margin-top: 8px;
+    }
+}
+
+/*
+ * Tablets and PC's
+ */
+@media all and (min-width: 681px) {
+    
+    /* Maintenance Menu Buttons */
+    #menu_buttons {
+        margin-top: 10px;
+    }
+    #menu_buttons button {
+        margin-right: 5px;
+    }
+    #menu_buttons #back {
+        float: right;
+    }
+}
