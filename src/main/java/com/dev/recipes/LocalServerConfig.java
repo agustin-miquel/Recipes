@@ -31,7 +31,7 @@ public class LocalServerConfig {
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
         driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/recipes?useUnicode=yes&characterEncoding=UTF8");
         driverManagerDataSource.setUsername("root");
-        driverManagerDataSource.setPassword("root");
+        driverManagerDataSource.setPassword("xxx");
 
         return driverManagerDataSource;
     }

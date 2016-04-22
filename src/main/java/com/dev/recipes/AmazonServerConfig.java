@@ -45,7 +45,7 @@ public class AmazonServerConfig {
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
         driverManagerDataSource.setUrl(jdbcUrl);
         driverManagerDataSource.setUsername("root");
-        driverManagerDataSource.setPassword("amazon123");
+        driverManagerDataSource.setPassword("xxx");
 
         return driverManagerDataSource;
     }

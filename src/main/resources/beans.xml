@@ -10,7 +10,7 @@
             <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
             <property name="url" value="jdbc:mysql://localhost:3306/recipes?characterEncoding=UTF8"/>
             <property name="username" value="root"/>
-            <property name="password" value="root"/>
+            <property name="password" value="xxx"/>
         </bean>
     </beans-->
     
@@ -31,13 +31,13 @@
             <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
             <property name="url" value="jdbc:mysql://localhost:3306/recipes?characterEncoding=UTF8"/>
             <property name="username" value="root"/>
-            <property name="password" value="root"/>
+            <property name="password" value="xxx"/>
         </bean-->
 
         <!--bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
             <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
             <property name="url" value="jdbc:mysql://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}"/>
             <property name="username" value="root"/>
-            <property name="password" value="amazon123"/>
+            <property name="password" value="xxx"/>
         </bean-->
 </beans>

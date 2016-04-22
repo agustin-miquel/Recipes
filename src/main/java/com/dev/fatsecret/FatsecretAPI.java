@@ -33,8 +33,8 @@ import org.springframework.web.client.RestTemplate;
 public class FatsecretAPI {
 
     private static final String URL_BASE = "http://platform.fatsecret.com/rest/server.api?";
-    private static final String CONSUMER_KEY = "bcf7f758800648428508b7e7a0d42dc8";
-    private static final String SHARED_SECRET = "7921c5fde4ff44d7a400330d3fcb0ad5";
+    private static final String CONSUMER_KEY = "xxx";
+    private static final String SHARED_SECRET = "yyy";
 
     /**
      * Call FatSecret service.
